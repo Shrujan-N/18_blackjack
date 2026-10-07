@@ -13,7 +13,8 @@ class Deck:
         random.shuffle(self.cards)
 
     def draw(self):
-        """Draws a card. Auto-replenishes and reshuffles if deck is empty."""
+        # If the deck becomes empty during gameplay, auto-replenish & reshuffle
+        # seamlessly without breaking the game or crashing.
         if not self.cards:
             print("\n[Deck empty! Reshuffling new deck...]")
             self.reset()
@@ -21,8 +22,9 @@ class Deck:
 
 def hand_value(hand):
     """
-    Calculates total score for a hand.
-    Aces count as 11 unless total exceeds 21, in which case they drop to 1.
+    # TASK 1: Correct Ace Scoring Logic
+    # Calculates hand value dynamically. Aces count as 11 when total <= 21,
+    # but reduce to 1 (value -= 10) as long as total exceeds 21.
     """
     value = 0
     aces = 0

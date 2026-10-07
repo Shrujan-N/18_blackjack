@@ -1,3 +1,7 @@
+### SRN: PES1UG24CS624
+### NAME: SHRUJAN N
+### SEC: K
+
 # Scenario 18 — Blackjack vs Dealer
 
 A terminal blackjack game with a deck, player/dealer hands, chips, and multiple rounds.

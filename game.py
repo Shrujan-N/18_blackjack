@@ -3,11 +3,14 @@ from cards import Deck, hand_value
 
 class Blackjack:
     def __init__(self):
+        # TASK 3: Persistent Bankroll
+        # Starting chips initialized to 100; persists across multiple rounds.
         self.chips = 100
         self.deck = Deck()
 
     def show(self, player, dealer, hide=True):
-        """Displays player and dealer hands clearly."""
+        # TASK 4: Clear Display & Feedback
+        # Displays dealer hidden card during player turn and reveals on stand.
         if hide:
             shown_dealer = [f"{dealer[0][0]}{dealer[0][1]}", "??"]
             print("Dealer:", " ".join(shown_dealer))
